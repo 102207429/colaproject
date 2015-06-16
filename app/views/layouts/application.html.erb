@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ColaProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <p class="navbar-brand"><%= link_to "Cola Project", root_path%></p>
+      <p class="navbar-text"><%=link_to "計算轉換率", transaction_path%></p>
+      <p class="navbar-text"><%=link_to "強力推銷潛力清單", sales_path%></p>
+      <p class="navbar-text"><%=link_to "網頁愛用者清單", love_path%></p>
+    </div>
+  </div>
+</nav>
+<div class="container">
+	<%= yield %>
+</div>
+</body>
+</html>
